@@ -14,4 +14,9 @@ class Calculator
     {
         return $a + $b;
     }
+
+    public function mutiply($a, $b)
+    {
+        return $a * $b;
+    }
 }
