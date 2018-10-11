@@ -8,10 +8,28 @@ use AppBundle\Utils\Calculator;
 
 class CalculatorTest extends TestCase
 {
+    private $calculator;
+
+    protected function setUp()
+    {
+        $this->calculator = new Calculator();
+    }
+
+    protected function tearDown()
+    {
+        $this->calculator = null;
+    }
+
     public function testSum()
     {
-        $calculator = new Calculator();
-        $result = $calculator->sum(5, 5);
+        $result = $this->calculator->sum(5, 5);
+
+        $this->assertEquals(10, $result);
+    }
+
+    public function testMultiply()
+    {
+        $result = $this->calculator->mutiply(2, 5);
 
         $this->assertEquals(10, $result);
     }
