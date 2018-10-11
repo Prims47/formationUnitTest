@@ -33,4 +33,9 @@ class CalculatorTest extends TestCase
 
         $this->assertEquals(10, $result);
     }
+
+    public function testSub()
+    {
+        $this->assertEquals(0, $this->calculator->sub(5, 5));
+    }
 }

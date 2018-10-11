@@ -19,4 +19,9 @@ class Calculator
     {
         return $a * $b;
     }
+
+    public function sub($a, $b)
+    {
+        return $a - $b;
+    }
 }
